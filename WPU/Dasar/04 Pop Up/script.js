@@ -3,9 +3,9 @@ var lagi = true;
 
 while (lagi === true) {
   var nama = prompt("Masukkan nama:");
-  alert("Ooo kamu " + nama);
+  alert("Ooo kamu adalah " + nama);
 
   var lagi = confirm("Kamu mau nama yang lain " + nama + " ?");
 }
 
-alert("Get the fuuck out " + nama);
+alert("Terima kasih " + nama);
