@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Latihan DOM Warna</title>
     <style>
+      html,
+      body {
+        height: 100%;
+      }
+
       body {
         text-align: center;
       }
@@ -15,26 +20,34 @@
         margin: 10px auto;
       }
 
-      .merah { background-color: red;}
-      .hijau { background-color: green;}
-      .biru { background-color: blue;}
+      .merah {
+        background-color: red;
+      }
+      .hijau {
+        background-color: green;
+      }
+      .biru {
+        background-color: blue;
+      }
 
-      .biru-muda {background-color: lightblue;}
+      .biru-muda {
+        background-color: lightblue;
+      }
     </style>
   </head>
   <body>
     <h1>Test ujicoba DOM</h1>
     <button type="button" id="tUbahWarna">Ubah</button>
-    <br><br>
+    <br /><br />
     <div class="kotak merah"></div>
-    <input type="range" name="sMerah" min="1" max="255">
+    <input type="range" name="sMerah" min="1" max="255" />
 
     <div class="kotak hijau"></div>
-    <input type="range" name="sHijau" min="1" max="255">
+    <input type="range" name="sHijau" min="1" max="255" />
 
-     <div class="kotak biru"></div>
-    <input type="range" name="sBiru" min="1" max="255">
-    
+    <div class="kotak biru"></div>
+    <input type="range" name="sBiru" min="1" max="255" />
+
     <script src="script.js"></script>
   </body>
 </html>
