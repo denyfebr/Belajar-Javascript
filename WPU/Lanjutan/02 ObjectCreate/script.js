@@ -20,26 +20,35 @@
 // };
 
 // 2. Function Declaration
-function mahasiswa(nama, energi) {
-  let mahasiswa = {};
-  mahasiswa.nama = nama;
-  mahasiswa.energi = energi;
-
-  mahasiswa.makan = function (porsi) {
+const methodMahasiswa = {
+  makan : function (porsi) {
     this.energi += porsi;
     console.log(`Selamat makan ${this.nama}!`);
-  };
-
-  mahasiswa.main = function (keringat) {
+  },
+  main : function (keringat) {
     this.energi -= keringat;
     console.log(`Habis main nih ${this.nama}!`);
-  };
+  },
+  tidur:function (jam) {
+    this.energi += jam*2;
+    console.log(`Habis tidur nih ${this.nama}!`);
+  }
+}
+
+function mahasiswa(nama, energi) {
+  // let mahasiswa = {};
+  let mahasiswa = Object.create(methodMahasiswa);
+  mahasiswa.nama = nama;
+  mahasiswa.energi = energi;
+  // mahasiswa.makan = methodMahasiswa.makan;
+  // mahasiswa.main = methodMahasiswa.main;
+  // mahasiswa.tidur = methodMahasiswa.tidur;
 
   return mahasiswa;
 }
 
 let sandhika = mahasiswa('Sandhika', 10);
-let doddy = mahasiswa('doddy', 20);
+let doddy = mahasiswa('Doddy', 20);
 
 // 3. Constructor Function
 // keyword new
