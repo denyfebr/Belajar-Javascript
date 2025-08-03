@@ -1,9 +1,13 @@
 // EXECUTION CONTEXT, HOISTING & SCOPE
 
+// Ada 2 fase pada execution context, execuitin context ini pada saat program kita dijalankan
+// 1. Fase creation
+// 2. Fase execution
+
 // var nama = 'Deny';
 // console.log(nama);
 
-// creation phase pada Global context
+// 1. Fase creation = creation phase pada Global context
 // semua variable akan diset undefined semua
 // nama var = undefined
 // nama function = fn() akan diisi isi dari script fungsi
@@ -13,7 +17,7 @@
 // javascript mendefiniskan object this sebagai window
 // this = window
 
-// execution phase (menjalankan programnya baris-per baris dari atas ke bawah)
+// 2. Fase execution = execution phase (menjalankan programnya baris-per baris dari atas ke bawah)
 
 // console.log(sayHello);
 // console.log(sayHello());
@@ -29,9 +33,10 @@
 
 // function membuat Local Execution Context
 // yang di dalamya terdapat creation dan execution phase
-// window
-// arguments
-// hoisting
+// juga punya akses ke:
+// - window
+// - arguments
+// - hoisting
 
 // var nama = 'Deny Febriyanto';
 // var username = '@sandhikagalih';

@@ -8,13 +8,13 @@
 // const tampilNama = (nama) => { return `Halo, ${nama}`}
 // console.log(tampilNama('Cargill'));
 
-// const tampilNama = (nama,waktu) => { 
+// const tampilNama = (nama,waktu) => {
 //   return `Selamat ${waktu}, ${nama}`;
 // }
 // console.log(tampilNama('Cargill','Malam'));
 
-// implisit return
-// const tampilNama = nama => `Halo, ${nama}`; 
+// implisit return = otomatis jadi return, ga perlu ditulis return
+// const tampilNama = nama => `Halo, ${nama}`;
 // console.log(tampilNama('Sekijang'));
 
 // jika tidak ada parameter
@@ -22,7 +22,7 @@
 // console.log(tampilNama());
 
 // menggunakan function map utk memetakkan sebuah fuction ke dalam array
-let suppliers = ['Cargill','Austindo Nusantara Jaya','Eagle High'];
+let suppliers = ['Cargill', 'Austindo Nusantara Jaya', 'Eagle High'];
 
 // Bukan Arrow Function
 // let jumlahHuruf = suppliers.map(function (nama) {
@@ -35,6 +35,6 @@ let suppliers = ['Cargill','Austindo Nusantara Jaya','Eagle High'];
 // console.log(jumlahHuruf);
 
 // Arrow Function -> mengembalikannya dalam bentuk object
-let jumlahHuruf = suppliers.map( nama => ({ nama: nama, jmlHuruf:nama.length }));
+let jumlahHuruf = suppliers.map((nama) => ({ nama: nama, jmlHuruf: nama.length }));
 // console.log(jumlahHuruf);
 console.table(jumlahHuruf);

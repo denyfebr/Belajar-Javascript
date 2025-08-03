@@ -41,12 +41,13 @@
 
 // console.dir(selamatMalam('Sandhika'));
 
+// closure untuk membuat private method
 let add = (function () {
   let counter = 0;
-  return function(){
+  return function () {
     return ++counter;
-  }
-})(); // immediately invoke function
+  };
+})(); // immediately invoke function, menampung function sekalugus menjalankan fungsinya
 
 // let a = add();
 
@@ -57,5 +58,3 @@ console.log(add());
 console.log(add());
 console.log(add());
 console.log(add());
-
-
