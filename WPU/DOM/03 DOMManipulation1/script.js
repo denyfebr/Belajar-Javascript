@@ -1,3 +1,13 @@
+// DOM Manipulation
+// 1. Manipulasi Element
+// 2. Manipulasi Node
+
+// 1. Manipulasi Element
+// - element.innerHTML
+// - element.style.<property>
+// - element.setAttribute()
+// - element.classList
+
 // const judul = document.getElementById('judul');
 // judul.innerHTML = '<em><b>Deny</b></em> Febriyanto';
 
