@@ -55,11 +55,11 @@
 
 // for..in (buat melooping object)
 const mhs = {
-    nama: 'Deny Febriyanto',
-    umur: 38,
-    email: 'denyfebri@gmail.com'
-}
+  nama: 'Deny Febriyanto',
+  umur: 38,
+  email: 'denyfebri@gmail.com',
+};
 
-for(m in mhs){
-    console.log(`${m}: ${mhs[m]}`);
+for (m in mhs) {
+  console.log(`${m}: ${mhs[m]}`);
 }
