@@ -7,10 +7,10 @@
 // // Menggabungkan 2 atau lebih array
 // const estate = ['Kebun Inti 1','Kebun Inti 2','Kebun Inti 3'];
 // // Jika menggunakan spread operator, array lebih fleksibel
-// // const orang = [...mills, ...dosen];
-// const orang = [...mills, 'Aji', ...dosen];
-// // const orang = mills.concat(dosen);
-// console.log(orang);
+// // const suppliers = [...mills, ...dosen];
+// const suppliers = [...mills, 'Aji', ...dosen];
+// // const suppliers = mills.concat(dosen);
+// console.log(suppliers);
 
 // Meng-copy array
 // const mills1 = mills; 
