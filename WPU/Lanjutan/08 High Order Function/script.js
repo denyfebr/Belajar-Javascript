@@ -1,73 +1,39 @@
-// Konsep this pada Arrow Function
+// High order function
 
-// Constructor Function
-// const Suppliers = function() {
-//     this.nama = 'Gandaerah Hedana';
-//     this.volume = 350;
-//     this.sayHello = function() {
-//         console.log(`Saya supplier ${this.nama}, dan volume pasokan ${this.volume} Ton`);
-//     }
+// function sebagai arguments atau parameter
+// kerjakanTugas -> High order function
+// selesai -> Callback
+// function kerjakanTugas(matakuliah, selesai) {
+//   console.log(`Mulai mengerjakan tugas ${matakuliah} ...`);
+//   selesai();
 // }
 
-// const gandaerah = new Suppliers();
-
-// Arrow function
-
-// const Suppliers = function() { // constructor tidak bisa dijadikan arrow function
-//     this.nama = 'Gandaerah Hedana';
-//     this.volume = 350;
-//     this.sayHello = () => { // bisanya function expression karena func exp mempunyai konsep this
-//         console.log(`Saya supplier ${this.nama}, dan volume pasokan ${this.volume} Ton`);
-//     }
+// function selesai() {
+//   alert('Selesai mengerjakan tugas!');
 // }
 
-// const gandaerah = new Suppliers();
+// kerjakanTugas('Pemrograman web', selesai);
 
-// Object literal
-// const mhs1 = {
-//     nama: 'Gandaerah',
-//     volume: 320,
-//     sayHello: () => {
-//         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.volume}`);
-// akan error karena arrow function tidak mengenal konsep this
-//     }
-// }
-
-// const Suppliers = function () {
-//   this.nama = 'Gandaerah Hedana';
-//   this.volume = 350;
-
-//   // function expression ga kena hoisting
-//   this.sayHello = function () {
-//     console.log(`Saya supplier ${this.nama}, dan volume pasokan ${this.volume} Ton`);
+// function sebagai return value
+// function ucapkanSalam(waktu) {
+//   return function (nama) {
+//     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
 //   };
+// }
 
-//   // function declaration kena hoisting dan akan mencari variable global (windows)
-//   setInterval(() => { // maka dari itu pake arrow function maka this akan dikenali
-//     console.log(this.volume++);
-//   }, 500);
-// };
+// let selamatMalam = ucapkanSalam('Malam');
+// console.dir(selamatMalam('Deny'));
 
-// const gandaerah = new Suppliers();
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i++) {
+//     action(i);
+//   }
+// }
 
-const box = document.querySelector('.box');
-box.addEventListener('click', function () {
-  let satu = 'size';
-  let dua = 'caption';
+// repeat(10, console.log);
+// repeat(3, alert);
 
-  if (this.classList.contains(satu)) {
-    // satu = temp;
-    // satu = dua;
-    // dua = temp;
-    [satu, dua] = [dua, satu];
-  }
-
-  //let that = this; //diakalin
-  // console.log(this);
-  this.classList.toggle(satu);
-  setTimeout(() => {
-    // dijadikan arrow function biar ga hoisting dan this-nya bukan global
-    // this.classList.toggle('caption'); isinya this jadi windows karena hoisting
-    this.classList.toggle(dua);
-  }, 600);
-});
+// // Contoh High Order Function
+// Array.prototype.map()
+// Array.prototype.filter()
+// Array.prototype.reduce();
