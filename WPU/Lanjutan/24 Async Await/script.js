@@ -25,9 +25,7 @@ function cobaPromise() {
         resolve(`selesai pada waktu ${Math.ceil(waktu)} ms`);
       }, waktu);
     } else {
-      setTimeout(() => {
-        reject(`kelamaan ancok! ${Math.ceil(waktu)} ms`);
-      }, waktu);
+      reject(`kelamaan ancok! ${Math.ceil(waktu)} ms`);
     }
   });
 }
